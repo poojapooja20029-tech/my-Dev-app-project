@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "DevOps CI/CD Pipeline",
+    "description": "Automated build and deploy pipeline using GitHub Actions, Docker, and Kubernetes.",
+    "tech": ["Docker", "GitHub Actions", "Kubernetes"],
+    "status": "completed",
+    "link": "https://github.com/poojapooja20029-tech/my-Dev-app-project"
+  },
+  {
+    "id": 2,
+    "title": "Personal Portfolio Website",
+    "description": "A responsive frontend portfolio deployed on Vercel with HTML, CSS, and JavaScript.",
+    "tech": ["HTML", "CSS", "JavaScript", "Vercel"],
+    "status": "completed",
+    "link": "https://my-dev-app-project.vercel.app"
+  },
+  {
+    "id": 3,
+    "title": "Full Stack App",
+    "description": "Converting portfolio to full stack using Node.js, Express, and Vercel serverless functions.",
+    "tech": ["Node.js", "Express", "Vercel"],
+    "status": "in-progress",
+    "link": "#"
+  }
+]
