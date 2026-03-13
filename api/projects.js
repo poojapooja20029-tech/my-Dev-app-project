@@ -1,31 +1,27 @@
-export default function handler(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Content-Type', 'application/json');
-
-  if (req.method === 'GET') {
-    res.status(200).json({
-      success: true,
-      projects: [
-        {
-          id: 1,
-          name: "My Dev App",
-          description: "Full Stack HTML + Node.js + Express + Vercel",
-          status: "active"
-        },
-        {
-          id: 2,
-          name: "Project Two",
-          description: "Another awesome project",
-          status: "active"
-        }
-      ]
-    });
-  } else {
-    res.status(405).json({ error: 'Method not allowed' });
-  }
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/api/projects",
+      "destination": "/api/projects.js"
+    }
+  ]
 }
 ```
 
-### Step 4: Commit the file
+Click **"Commit changes"** ✅
+
+---
+
+## Why this fixes it:
 ```
-Scroll down → Click "Commit new file" (green button)
+❌ Old way used "routes" + "builds" → causes 404
+✅ New way uses "rewrites" → Vercel handles it automatically
+```
+
+---
+
+## After 2-3 mins test:
+```
+https://my-dev-app-project.vercel.app/api/projects
+→ Should show JSON ✅
