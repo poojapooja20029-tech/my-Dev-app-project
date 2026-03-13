@@ -1,0 +1,44 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    }
+  ]
+}
+```
+4. Click **"Commit new file"**
+
+---
+
+### Step 6: Vercel Auto-Deploys
+```
+Vercel detects GitHub push
+→ Auto rebuilds in 2-3 minutes
+→ Go to vercel.com → your project → Deployments
+→ Wait for "Ready" ✅
+```
+
+### Step 7: Test it
+```
+https://my-dev-app-project.vercel.app/api/projects
+→ Should show JSON ✅
+```
+
+---
+
+## Your folder structure should look like:
+```
+my-Dev-app-project/
+├── api/
+│   └── projects.js   ← NEW FILE
+├── vercel.json        ← NEW FILE
+├── package.json
+└── server.js
