@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+api/node_modules/
+
+# Environment variables (NEVER commit this!)
+.env
+
+# Vercel build output
+.vercel/
+
+# OS files
+.DS_Store
+Thumbs.db
